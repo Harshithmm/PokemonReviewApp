@@ -135,3 +135,4 @@ C:\Users\hamut\Music\YTprjs\PokemonReviewApp\PokemonReviewApp\PokemonReviewApp\b
 C:\Users\hamut\Music\YTprjs\PokemonReviewApp\PokemonReviewApp\PokemonReviewApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\hamut\Music\YTprjs\PokemonReviewApp\PokemonReviewApp\PokemonReviewApp\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\hamut\Music\YTprjs\PokemonReviewApp\PokemonReviewApp\PokemonReviewApp\obj\Debug\net8.0\PokemonReviewApp.sourcelink.json
+C:\Users\hamut\Music\YTprjs\PokemonReviewApp\PokemonReviewApp\PokemonReviewApp\bin\Debug\net8.0\AutoMapper.dll

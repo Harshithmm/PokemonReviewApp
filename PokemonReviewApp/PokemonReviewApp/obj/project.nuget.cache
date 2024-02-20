@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "49gSQAE3zGDdOmqbSluRuts44/1wKqfw/NsaF7ilTX9ed92g5Krpx1DJftnZf0NohAjgy3k2WBz6TK46rnd90A==",
+  "dgSpecHash": "3/oCSYPc2NaiD5qnnPx8ahNXAzotFjT+PAJ6X8kXDB1Jo15OsNVo5g5DG3bBDY7OdTA23ssLNbc4H9HP7EVfQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\hamut\\Music\\YTprjs\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\hamut\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
