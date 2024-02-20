@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "VzLoBN5vl5L7q7TkUYoFqrEkMuqPpsbbvtsMrnqW2VLGTLk67Tw1PO7m7cBC/BaEbSbzeTrFpTq+4jp1gEeVHQ==",
+  "dgSpecHash": "49gSQAE3zGDdOmqbSluRuts44/1wKqfw/NsaF7ilTX9ed92g5Krpx1DJftnZf0NohAjgy3k2WBz6TK46rnd90A==",
   "success": true,
   "projectFilePath": "C:\\Users\\hamut\\Music\\YTprjs\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp\\PokemonReviewApp.csproj",
   "expectedPackageFiles": [
@@ -22,6 +22,7 @@
     "C:\\Users\\hamut\\.nuget\\packages\\microsoft.entityframeworkcore.design\\8.0.2\\microsoft.entityframeworkcore.design.8.0.2.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\8.0.2\\microsoft.entityframeworkcore.relational.8.0.2.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\8.0.2\\microsoft.entityframeworkcore.sqlserver.8.0.2.nupkg.sha512",
+    "C:\\Users\\hamut\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\8.0.2\\microsoft.entityframeworkcore.tools.8.0.2.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\8.0.0\\microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "C:\\Users\\hamut\\.nuget\\packages\\microsoft.extensions.caching.memory\\8.0.0\\microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
