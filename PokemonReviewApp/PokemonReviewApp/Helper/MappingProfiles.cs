@@ -7,6 +7,7 @@ namespace PokemonReviewApp.Helper
         public MappingProfiles()
         {
             CreateMap<PokemonReviewApp.Models.Pokemon, PokemonReviewApp.Dto.PokemonDto>();
+            CreateMap<PokemonReviewApp.Models.Category, PokemonReviewApp.Dto.CategoryDto>();
         }
     }
 }
