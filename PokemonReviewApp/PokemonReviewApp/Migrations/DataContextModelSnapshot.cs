@@ -53,7 +53,7 @@ namespace PokemonReviewApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("PokemonReviewApp.Models.Owner", b =>

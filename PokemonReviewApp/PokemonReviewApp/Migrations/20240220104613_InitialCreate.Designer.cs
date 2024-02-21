@@ -12,7 +12,7 @@ using PokemonReviewApp.Data;
 namespace PokemonReviewApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240220063557_InitialCreate")]
+    [Migration("20240220104613_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -56,7 +56,7 @@ namespace PokemonReviewApp.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Country");
+                    b.ToTable("Countries");
                 });
 
             modelBuilder.Entity("PokemonReviewApp.Models.Owner", b =>

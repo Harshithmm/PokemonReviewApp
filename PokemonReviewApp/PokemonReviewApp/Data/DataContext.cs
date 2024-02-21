@@ -16,6 +16,8 @@ namespace PokemonReviewApp.Data
         public DbSet<Review> Reviews { get; set; }
         public DbSet<Reviewer> Reviewers { get; set; }
 
+        public DbSet<Country> Countries { get; set; }
+
         //used to configure the relationship between the tables
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

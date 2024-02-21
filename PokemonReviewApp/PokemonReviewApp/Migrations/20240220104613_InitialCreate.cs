@@ -25,7 +25,7 @@ namespace PokemonReviewApp.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Country",
+                name: "Countries",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -34,7 +34,7 @@ namespace PokemonReviewApp.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Country", x => x.Id);
+                    table.PrimaryKey("PK_Countries", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -80,9 +80,9 @@ namespace PokemonReviewApp.Migrations
                 {
                     table.PrimaryKey("PK_Owners", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Owners_Country_CountryId",
+                        name: "FK_Owners_Countries_CountryId",
                         column: x => x.CountryId,
-                        principalTable: "Country",
+                        principalTable: "Countries",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -215,7 +215,7 @@ namespace PokemonReviewApp.Migrations
                 name: "Reviewers");
 
             migrationBuilder.DropTable(
-                name: "Country");
+                name: "Countries");
         }
     }
 }
