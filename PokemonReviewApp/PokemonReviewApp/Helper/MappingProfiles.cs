@@ -1,15 +1,16 @@
 ﻿using AutoMapper;
 
-namespace PokemonReviewApp.Helper
+namespace PokemonReviewApp.Helper;
+
+public class MappingProfiles:Profile
 {
-    public class MappingProfiles:Profile
+    public MappingProfiles()
     {
-        public MappingProfiles()
-        {
-            CreateMap<PokemonReviewApp.Models.Pokemon, PokemonReviewApp.Dto.PokemonDto>();
-            CreateMap<PokemonReviewApp.Models.Category, PokemonReviewApp.Dto.CategoryDto>();
-            CreateMap<PokemonReviewApp.Models.Country, PokemonReviewApp.Dto.CountryDto>();
-            CreateMap<PokemonReviewApp.Models.Owner, PokemonReviewApp.Dto.OwnerDto>();
-        }
+        CreateMap<PokemonReviewApp.Models.Pokemon, PokemonReviewApp.Dto.PokemonDto>();
+        CreateMap<PokemonReviewApp.Models.Category, PokemonReviewApp.Dto.CategoryDto>();
+        CreateMap<PokemonReviewApp.Models.Country, PokemonReviewApp.Dto.CountryDto>();
+        CreateMap<PokemonReviewApp.Models.Owner, PokemonReviewApp.Dto.OwnerDto>();
+        CreateMap<PokemonReviewApp.Models.Review, PokemonReviewApp.Dto.ReviewDto>();
+        CreateMap<PokemonReviewApp.Models.Reviewer, PokemonReviewApp.Dto.ReviewerDto>();
     }
 }
