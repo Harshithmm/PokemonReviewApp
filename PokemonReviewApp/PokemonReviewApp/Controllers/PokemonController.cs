@@ -93,5 +93,65 @@ namespace PokemonReviewApp.Controllers
             return Ok(rating);
         }
 
+        [HttpPost]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+        public IActionResult CreatePokemon([FromQuery] int ownerId, [FromQuery] int categoryId, [FromBody] PokemonDto pokemonCreate)
+        {
+            if (pokemonCreate == null)
+                return BadRequest(ModelState);
+
+            var pokemons = _pokemonRepository.GetPokemonTrimToUpper(pokemonCreate);
+
+            if (pokemons != null)
+            {
+                ModelState.AddModelError("", "Owner already exists");
+                return StatusCode(422, ModelState);
+            }
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var pokemonMap = _mapper.Map<Pokemon>(pokemonCreate);
+
+
+            if (!_pokemonRepository.CreatePokemon(ownerId, categoryId, pokemonMap))
+            {
+                ModelState.AddModelError("", "Something went wrong while savin");
+                return StatusCode(500, ModelState);
+            }
+
+            return Ok("Successfully created");
+        }
+
+        [HttpPut("{pokeId}")]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        public IActionResult UpdatePokemon(int pokeId,[FromQuery] int ownerId, [FromQuery] int categoryId,[FromBody] PokemonDto updatedPokemon)
+        {
+            if (updatedPokemon == null)
+                return BadRequest(ModelState);
+
+            if (pokeId != updatedPokemon.Id)
+                return BadRequest(ModelState);
+
+            if (!_pokemonRepository.PokemonExists(pokeId))
+                return NotFound();
+
+            if (!ModelState.IsValid)
+                return BadRequest();
+
+            var pokemonMap = _mapper.Map<Pokemon>(updatedPokemon);
+
+            if (!_pokemonRepository.UpdatePokemon(ownerId, categoryId, pokemonMap))
+            {
+                ModelState.AddModelError("", "Something went wrong updating owner");
+                return StatusCode(500, ModelState);
+            }
+
+            return NoContent();
+        }
+
     }
 }

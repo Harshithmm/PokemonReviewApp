@@ -1,4 +1,6 @@
-﻿using PokemonReviewApp.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using PokemonReviewApp.Data;
+using PokemonReviewApp.Dto;
 using PokemonReviewApp.Interfaces;
 using PokemonReviewApp.Models;
 
@@ -33,6 +35,47 @@ namespace PokemonReviewApp.Repository
         public bool PokemonExists(int pokeId)
         {
            return context.Pokemon.Any(p=>p.Id==pokeId);
+        }
+
+        public Pokemon GetPokemonTrimToUpper(PokemonDto pokemonCreate)
+        {
+            return GetPokemons().Where(c => c.Name.Trim().ToUpper() == pokemonCreate.Name.TrimEnd().ToUpper())
+                .FirstOrDefault();
+        }
+
+        public bool CreatePokemon(int ownerId, int categoryId, Pokemon pokemon)
+        {
+            var pokemonOwnerEntity=context.Owners.FirstOrDefault(o => o.Id==ownerId);
+            var pokemonCategoryEntity=context.Categories.FirstOrDefault(c => c.Id==categoryId);
+
+            var pokemonOwner = new PokemonOwner
+            {
+                Owner = pokemonOwnerEntity,
+                Pokemon = pokemon
+            };
+
+            context.Add(pokemonOwner);
+            var pokemonCategory = new PokemonCategory
+            {
+                Category = pokemonCategoryEntity,
+                Pokemon = pokemon
+            };
+
+            context.Add(pokemonCategory);
+            context.Add(pokemon);
+
+            return Save();
+        }
+
+        public bool UpdatePokemon(int ownerId, int categoryId, Pokemon pokemon)
+        {
+            context.Update(pokemon);
+            return Save();
+        }
+
+        public bool Save()
+        {
+            return context.SaveChanges() > 0;
         }
     }
 }

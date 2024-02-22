@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 using PokemonReviewApp.Data;
 using PokemonReviewApp.Interfaces;
 using PokemonReviewApp.Models;
@@ -32,6 +33,29 @@ namespace PokemonReviewApp.Repository
         public bool CountryExists(int id)
         {
             return context.Countries.Any(c=>c.Id==id);
+        }
+
+        public bool CreateCountry(Country country)
+        {
+            context.Add(country);
+            return Save();
+        }
+        public bool UpdateCountry(Country country)
+        {
+            context.Update(country);
+            return Save();
+        }
+
+        public bool DeleteCountry(Country country)
+        {
+            context.Remove(country);
+            return Save();
+        }
+
+        public bool Save()
+        {
+            var saved = context.SaveChanges();
+            return saved > 0;
         }
     }
 }
